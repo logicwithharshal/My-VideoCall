@@ -22,12 +22,20 @@
 }
 .LandingPageContainer nav .navlist{
   display: flex;
-  gap: 3rem;
+  gap: 4rem;
   cursor: pointer;
-  /* justify-self: center; */
+  justify-self: center;
   padding-right: 80px;
 }
-
+.LandingPageContainer nav .navlist p :hover {
+  cursor: pointer;
+  /* text-decoration: none;
+  background-color: white; */
+}
+ /* .LandingPageContainer > .navlist > Button{
+  text-decoration: none;
+  color: white;
+ } */
 .landingMainContainer{
   display: flex;
   justify-content: space-between;

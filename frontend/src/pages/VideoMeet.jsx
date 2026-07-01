@@ -38,7 +38,7 @@ export default function VideoMeetComponent(){
     let [screenAvailable, setScreenAvailable] = useState();
     let [messages, setMessages] = useState([]);
     let [message, setMessage] = useState("");
-    let [newMessages, setNewMessages] = useState(3);
+    let [newMessages, setNewMessages] = useState();
     let [askForUsername, setAskUsername] = useState(true);
     let [username, setUsername] = useState("");
     const videoRef = useRef([])
@@ -400,12 +400,12 @@ export default function VideoMeetComponent(){
                         <IconButton onClick={handleScreen} sx={{color:"white"}}>
                             {screen==true ? <ScreenShareIcon/> :<StopScreenShareIcon/>}
                         </IconButton> : <></>}
-
-                        <Badge badgeContent={newMessages} max={999} color='secondary'>
-                            <IconButton onClick={()=>setModal(!showModal)} sx={{color:"white"}}>
-                                <ChatIcon/>
-                            </IconButton>
-                        </Badge>
+                        <IconButton onClick={()=>setModal(!showModal)} sx={{color:"white"}}>
+                            <ChatIcon/>
+                        </IconButton>
+                        {/* <Badge badgeContent={newMessages} max={999} color='secondary'>
+                            
+                        </Badge> */}
                     </div>
                     <video className={styles.meetUserVideo} ref={localVideoRef} autoPlay muted></video>
                     <div className={styles.conferenceView}>

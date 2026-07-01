@@ -1,4 +1,5 @@
 import { User } from "../models/user.model.js";
+import { Meeting } from "../models/meeting.model.js";
 import httpStatus from "http-status";
 import bcrypt, { hash } from "bcrypt";
 import crypto from "crypto";
@@ -46,14 +47,14 @@ const register = async (req, res) => {
 
         await newUser.save();
 
-        res.status(httpsStatus.CREATED).json({message: "User Registered"})
+        res.status(httpStatus.CREATED).json({message: "User Registered"})
 
     }catch(e){
         res.json({message: `Something went wrong ${e}`})
     }
 }
 const getUserHistory = async(req, res) => {
-    const {token} = req.auery;
+    const {token} = req.query;
 
     try{
         const user = await User.findOne({token:token});
