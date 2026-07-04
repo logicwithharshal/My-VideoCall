@@ -1,0 +1,149 @@
+.lobbyContainer {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.lobbyContent {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    max-width: 1100px;
+}
+
+.lobbyVideoSection {
+    position: relative;
+    flex: 1;
+}
+
+.lobbyVideo {
+    width: 100%;
+    max-width: 520px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 20px;
+    background: #000;
+    display: block;
+}
+
+.lobbyVideoControls {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+}
+
+.lobbyControlBtn {
+    background: rgba(255,255,255,0.15) !important;
+    backdrop-filter: blur(10px);
+    border-radius: 50% !important;
+    width: 48px !important;
+    height: 48px !important;
+    color: white !important;
+    border: 1px solid rgba(255,255,255,0.2) !important;
+}
+
+.lobbyControlBtn.off {
+    background: rgba(220, 53, 69, 0.8) !important;
+}
+
+.lobbyInfoSection {
+    flex: 1;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.lobbyTitle {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+    background: linear-gradient(to right, #fff, #a0c4ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.lobbySubtitle {
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.6);
+    margin: 0;
+}
+
+.lobbyRoomCode {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 12px;
+    padding: 14px 20px;
+}
+
+.lobbyRoomCode p {
+    margin: 0;
+    font-size: 12px;
+    color: rgba(255,255,255,0.5);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.lobbyRoomCode span {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #a0c4ff;
+    letter-spacing: 2px;
+}
+
+.lobbyInputWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.lobbyInputWrapper label {
+    font-size: 13px;
+    color: rgba(255,255,255,0.6);
+}
+
+.lobbyInput {
+    background: rgba(255,255,255,0.08) !important;
+    border-radius: 12px !important;
+    color: white !important;
+}
+
+.lobbyInput input {
+    color: white !important;
+    padding: 14px 16px !important;
+}
+
+.lobbyInput fieldset {
+    border-color: rgba(255,255,255,0.2) !important;
+    border-radius: 12px !important;
+}
+
+.lobbyInput:hover fieldset {
+    border-color: rgba(255,255,255,0.5) !important;
+}
+
+.lobbyConnectBtn {
+    padding: 14px !important;
+    border-radius: 12px !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    text-transform: none !important;
+    background: linear-gradient(135deg, #512da8, #1976d2) !important;
+    letter-spacing: 0.5px !important;
+    box-shadow: 0 4px 20px rgba(81, 45, 168, 0.4) !important;
+    transition: transform 0.2s, box-shadow 0.2s !important;
+}
+
+.lobbyConnectBtn:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 25px rgba(81, 45, 168, 0.6) !important;
+}
