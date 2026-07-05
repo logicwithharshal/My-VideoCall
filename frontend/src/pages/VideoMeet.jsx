@@ -258,8 +258,6 @@ export default function VideoMeetComponent(){
     }
 
     let getMedia = () => {
-        setVideo(videoAvailable);
-        setAudio(audioAvailable);
         connectToSocketServer();
     }
 
@@ -267,15 +265,31 @@ export default function VideoMeetComponent(){
 
     let connect = () => {
         setAskUsername(false);
+        if(Array.isArray(video)){
+            setVideo(videoAvailable);
+        }
+        if(audio === undefined){
+            setAudio(audioAvailable);
+        }
         getMedia();
     }
 
     let handleVideo = () => {
-        setVideo(!video);
+        if(window.localStream){
+            setVideo(!video);
+            window.localStream.getVideoTracks().forEach(track => {
+                track.enabled = !track.enabled;
+            });
+        }
     }
 
     let handleAudio = () => {
-        setAudio(!audio);
+        if(window.localStream){
+            setAudio(!audio);
+            window.localStream.getAudioTracks().forEach(track => {
+                track.enabled = !track.enabled;
+            });
+        }
     }
 
     let getDisplayMediaSucess = (stream) => {
@@ -451,7 +465,18 @@ export default function VideoMeetComponent(){
                                 }): <p>No Messages Yet</p>}
                             </div>
                             <div className={styles.chattingArea}>
-                                <TextField value={message} onChange={e => setMessage(e.target.value)} id="outlined-basic" label="Enter Your Chat" variant="outlined" />
+                                <TextField value={message} onChange={e => setMessage(e.target.value)} id="outlined-basic" label="Enter Your Chat" variant="outlined"
+                                    sx={{
+                                        '& .MuiOutlinedInput-root': {
+                                        color: 'white',
+                                        borderRadius: '10px',
+                                        backgroundColor: 'rgba(255,255,255,0.06)',
+                                        '& fieldset': { borderColor: 'rgba(255,255,255,0.1)' },
+                                        '&:hover fieldset': { borderColor: 'rgba(255,255,255,0.3)' },
+                                        },
+                                        '& .MuiInputLabel-root': { color: 'rgba(255,255,255,0.4)' },
+                                    }}
+                                />
                                 <Button variant='contained' onClick={sendMessage}>Send</Button>
                             </div>
                         </div>

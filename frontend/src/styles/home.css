@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&display=swap');
+
+.homeContainer {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    overflow: hidden;
+}
+
+/* Navbar */
+.homeNavBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 40px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.03);
+    backdrop-filter: blur(10px);
+}
+
+.homeNavBrand {
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.homeNavBrand h3 {
+    font-size: 2.2rem;
+    /* padding-left: 10px; */
+    font-weight: 600;
+    background: linear-gradient(to right, #fff, #a0c4ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+}
+
+.homeNavActions {
+    padding-right: 30px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.homeNavLink {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.7);
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 8px;
+    transition: color 0.2s;
+}
+
+.homeNavLink:hover {
+    color: white;
+}
+
+/* Main */
+.homeMain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    padding: 0 80px;
+    gap: 60px;
+}
+
+/* Left Panel */
+.homeLeftPanel {
+    padding-left: 30px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    max-width: 520px;
+}
+
+.homeHeroTitle {
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+    color: white;
+}
+
+.homeHeroTitle span {
+    background: linear-gradient(to right, #a0c4ff, #c77dff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.homeHeroSubtitle {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.homeActions {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.homeJoinRow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 14px;
+    padding: 6px 6px 6px 4px;
+}
+
+.homeJoinRow .MuiOutlinedInput-notchedOutline {
+    border: none !important;
+}
+
+.homeDivider {
+    width: 100%;
+    height: 1px;
+    background: rgba(255,255,255,0.1);
+}
+
+.homeFootNote {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.4);
+    margin: 0;
+}
+
+.homeFootNote a {
+    color: #a0c4ff;
+    text-decoration: none;
+}
+
+.homeFootNote a:hover {
+    text-decoration: underline;
+}
+
+/* Right Panel */
+.homeRightPanel {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 140px;
+}
+
+.homeRightPanel img {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    border-radius: 20px;
+    filter: drop-shadow(0 20px 60px rgba(0,0,0,0.5));
+}

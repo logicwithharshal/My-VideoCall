@@ -21,6 +21,7 @@
     width: 768px;
     max-width: 100%;
     min-height: 480px;
+    isolation: isolate;
 }
 
 .auth-container p {
@@ -148,6 +149,7 @@
     transition: all 0.6s ease-in-out;
     border-radius: 150px 0 0 100px;
     z-index: 1000;
+    box-shadow: -5px 0 15px rgba(81, 45, 168, 0.0);
 }
 
 .auth-container.active .toggle-container {

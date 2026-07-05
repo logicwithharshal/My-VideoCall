@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nexLanding {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    color: white;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Navbar */
+.nexNav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 60px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.nexLogo {
+    font-size: 2.2rem;
+    padding-left: 10px;
+    font-weight: 700;
+    letter-spacing:1px;
+    background: linear-gradient(to right, #fff, #a0c4ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nexNavLinks {
+    padding-right: 15px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nexNavSignIn {
+    background: transparent;
+    color: rgba(255,255,255,0.7);
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.2s;
+}
+
+.nexNavSignIn:hover {
+    border-color: rgba(255,255,255,0.5);
+    color: white;
+}
+
+.nexNavBtn {
+    background: white;
+    color: #0f3460;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.2s;
+}
+
+.nexNavBtn:hover {
+    background: #e5e5e5;
+    transform: translateY(-1px);
+}
+
+/* Hero */
+.nexHero {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 60px;
+    /* padding-left: 20px; */
+    gap: 80px;
+}
+
+.nexHeroLeft {
+    flex: 1;
+    max-width: 520px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 60px;
+    gap: 25px;
+}
+
+.nexEyebrow {
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+}
+
+.nexHeroTitle {
+    font-size: 5rem;
+    font-weight: 800;
+    line-height: 1.0;
+    letter-spacing: -3px;
+    color: white;
+}
+
+.nexHeroSub {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.7;
+    max-width: 400px;
+}
+
+.nexHeroBtns {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.nexPrimaryBtn {
+    background: linear-gradient(135deg, #512da8, #1976d2);
+    color: white;
+    border: none;
+    padding: 16px 36px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.2s;
+    box-shadow: 0 4px 20px rgba(81, 45, 168, 0.4);
+}
+
+.nexPrimaryBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(81, 45, 168, 0.6);
+}
+
+.nexHeroNote {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.25);
+}
+
+/* Right side */
+.nexHeroRight {
+    flex: 1;
+    display: flex;
+    padding-left: 60px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* OPTION 2: image */
+.nexHeroImg {
+    height: 80vh;
+    width: auto;
+    filter: drop-shadow(0 20px 60px rgba(0,0,0,0.5));
+}
+
+/* OPTION 1: mockup */
+.nexMockup {
+    height: 400px;
+    width: 520px;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.05);
+    box-shadow: 0 40px 80px rgba(0,0,0,0.4);
+    backdrop-filter: blur(10px);
+}
+
+.nexMockupBar {
+    background: rgba(255,255,255,0.05);
+    padding: 12px 16px;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.nexMockupBar span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.15);
+    display: block;
+}
+
+.nexMockupScreen {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.nexMockupGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.nexMockupTile {
+    background: rgba(255,255,255,0.05);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.nexMockupTile.active {
+    border-color: rgba(255,255,255,0.15);
+    background: rgba(255,255,255,0.08);
+}
+
+.nexMockupTile p {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.5);
+    margin: 0;
+}
+
+.nexAvatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: white;
+}
+
+.nexMockupControls {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    padding-top: 4px;
+}
+
+.nexMockupBtn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+}
+
+.nexMockupBtn.red {
+    background: #ef4444;
+}
+
+/* Footer */
+.nexFooter {
+    padding: 20px 60px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.nexFooter p {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.2);
+}
